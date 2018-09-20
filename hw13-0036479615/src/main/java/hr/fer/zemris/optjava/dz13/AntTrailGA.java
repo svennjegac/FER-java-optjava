@@ -6,11 +6,8 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import javax.rmi.CORBA.Util;
 import javax.swing.SwingUtilities;
 
-import hr.fer.zemris.optjava.dz13.game.Action;
 import hr.fer.zemris.optjava.dz13.game.World;
 import hr.fer.zemris.optjava.dz13.genetic.GenerationElitisticGA;
 import hr.fer.zemris.optjava.dz13.genetic.IOptAlgorithm;
@@ -21,12 +18,7 @@ import hr.fer.zemris.optjava.dz13.impl.PopulationGenerator;
 import hr.fer.zemris.optjava.dz13.impl.TreeCrossover;
 import hr.fer.zemris.optjava.dz13.impl.TreeMutation;
 import hr.fer.zemris.optjava.dz13.impl.TreeReproduction;
-import hr.fer.zemris.optjava.dz13.impl.TreeSolution;
 import hr.fer.zemris.optjava.dz13.impl.WorldProblem;
-import hr.fer.zemris.optjava.dz13.nodes.IfFoodAheadNode;
-import hr.fer.zemris.optjava.dz13.nodes.Node;
-import hr.fer.zemris.optjava.dz13.nodes.Prog3Node;
-import hr.fer.zemris.optjava.dz13.nodes.TerminalNode;
 import hr.fer.zemris.optjava.dz13.nodes.Tree;
 
 public class AntTrailGA {
@@ -67,29 +59,7 @@ public class AntTrailGA {
 						maxGenerations);
 		
 		ISolution<Tree> solution = algorithm.run();
-		
-//		Node node = 
-//	            new IfFoodAheadNode(
-//	                    new TerminalNode(Action.MOVE, null, null),
-//	                    new Prog3Node(
-//	                            new TerminalNode(Action.RIGHT, null, null),
-//	                            new Prog3Node(
-//	                                    new IfFoodAheadNode(
-//	                                            new TerminalNode(Action.MOVE, null, null),
-//	                                            new TerminalNode(Action.RIGHT, null, null)),
-//	                                    new TerminalNode(Action.MOVE, null, null),
-//	                                    new IfFoodAheadNode(
-//	                                            new TerminalNode(Action.MOVE, null, null),
-//	                                            new TerminalNode(Action.RIGHT, null, null))),
-//	                            new IfFoodAheadNode(
-//	                                    new TerminalNode(Action.MOVE, null, null),
-//	                                    new TerminalNode(Action.RIGHT, null, null))));
-//
-//	        Tree tree = new Tree(node);
-//	        ISolution<Tree> solution = new TreeSolution(tree, 0, 0);
-//	        System.out.println(solution.getRepresentation());
-//	        System.out.println(problem.getFitness(solution));
-		
+	
 		try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(args[4]))))) {
 			bw.write(solution.getRepresentation().toString());
 		} catch (IOException e) {

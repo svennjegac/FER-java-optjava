@@ -126,17 +126,9 @@ public class World {
 		case DOWN:
 			newPosition.setY(newPosition.getY() + 1);
 		}
-		
-//		System.out.println("#####################");
-//		System.out.println("Pozicija prije moda:");
-//		System.out.println("X: " + newPosition.getX() + ", Y: " + newPosition.getY());
-		
+
 		newPosition.setX(((newPosition.getX() % width) + width) % width);
 		newPosition.setY(((newPosition.getY() % height) + height) % height);
-		
-//		System.out.println("Pozicija poslije moda:");
-//		System.out.println("X: " + newPosition.getX() + ", Y: " + newPosition.getY());
-		
 		
 		return newPosition;
 	}

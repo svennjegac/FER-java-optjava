@@ -1,6 +1,5 @@
 package hr.fer.zemris.optjava.dz13.nodes;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 

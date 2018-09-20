@@ -24,24 +24,12 @@ public class TreeMutation implements IMutationOperator<Tree> {
 			return null;
 		}
 		
-//		System.out.println("MUTACIJA");
-//		
-//		System.out.println("DRVO: " + tree);
-//		System.out.println("PARENT:" + parent);
-//		
 		Node node = NodeUtil.createGrowFunctionNode(MAX_DEPTH - (tree.getDepth() - parent.getDepth()), rand.nextDouble() > 0.5 ? true : false);
 		parent.setRandomChild(node);
-		
-//		System.out.println("NODE: " + node);
-//		System.out.println("PARENT 2: " + parent);
-//		
-//		System.out.println("DRVO 2: " + tree);
 		
 		if (tree.getDepth() > MAX_DEPTH || tree.getNumberOfNodes() > MAX_NODES) {
 			return null;
 		}
-		
-		//System.out.println("KRAJ");
 		
 		return new TreeSolution(tree, 0, 0);
 	}

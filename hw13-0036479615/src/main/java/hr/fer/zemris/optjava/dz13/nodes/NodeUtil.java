@@ -1,6 +1,5 @@
 package hr.fer.zemris.optjava.dz13.nodes;
 
-import java.security.cert.CRLReason;
 import java.util.Random;
 
 import hr.fer.zemris.optjava.dz13.game.Action;

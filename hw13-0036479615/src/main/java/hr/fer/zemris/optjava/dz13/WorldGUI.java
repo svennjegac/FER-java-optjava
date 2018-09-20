@@ -2,8 +2,6 @@ package hr.fer.zemris.optjava.dz13;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +16,8 @@ import hr.fer.zemris.optjava.dz13.genetic.ISolution;
 import hr.fer.zemris.optjava.dz13.nodes.Tree;
 
 public class WorldGUI extends JFrame {
+
+	private static final long serialVersionUID = 141421421421421L;
 
 	private static final int MAX_ACTIONS = 600;
 	

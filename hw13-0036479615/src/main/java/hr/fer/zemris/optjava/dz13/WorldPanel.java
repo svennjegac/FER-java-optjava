@@ -12,7 +12,7 @@ import hr.fer.zemris.optjava.dz13.game.World;
 
 public class WorldPanel extends JPanel {
 
-	private static final Color BACKGRD = Color.BLACK;
+	private static final long serialVersionUID = 45543545431L;
 	private static final Color AGENT = Color.RED;
 	private static final Color FOOD = Color.BLUE;
 	private static final Color NOT_FOOD = Color.YELLOW;
@@ -55,7 +55,6 @@ public class WorldPanel extends JPanel {
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				JPanel field = fields[i][j];
-				//field.setBackground(BACKGRD);
 				Position position = new Position(j, i);
 				
 				if (world.foodAtPosition(position)) {
